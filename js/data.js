@@ -142,5 +142,5 @@ const BLOGPOSTS = [
 <img class="afbeelding" src="images/20260419_200938_copy_1024x2216.jpg" alt="Twee glazen potten met moromi" style="margin: 8px 0 16px;">
 <p>Daarna gaat alles in grote potten met pekel: de moromi. Elke week even roeren, en verder... geduld. Eerste proefronde over een paar maanden, de echte saus hoop ik in de winter van 2027 te kunnen bottelen.</p>
 <p>We houden het op de blog bij — van boon tot druppel.</p>`
-  }  }
+  }
 ];
