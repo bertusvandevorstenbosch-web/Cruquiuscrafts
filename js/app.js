@@ -108,7 +108,7 @@ views.winkel = function () {
       we sturen je dan de betaal- en afhaalmogelijkheden. Ophalen in ${SITE.plaats} of afspreken.</p>
     <h2 style="font-size:1.15rem; margin-bottom:12px;">🏺 Ceramiek</h2>
     <div class="grid">${ceramiek.map(productKaart).join("")}</div>
-    <h2 style="font-size:1.15rem; margin:28px 0 12px;">🫘 Uit de keuken</h2>
+    <h2 style="font-size:1.15rem; margin:28px 0 12px;">🫙 Uit de keuken</h2>
     <div class="grid">${keuken.map(productKaart).join("")}</div>`;
 };
 
