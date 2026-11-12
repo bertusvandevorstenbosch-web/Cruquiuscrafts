@@ -19,6 +19,7 @@ de site werkt direct bij.
 - **Foto's**: zet je foto in de map `images/` en vul de bestandsnaam in bij `afbeelding`
 - **Uitverkocht**: zet `opVoorraad: false`
 - **Blogpost schrijven**: kopieer een blok in `BLOGPOSTS`; tekst mag gewone HTML bevatten (`<p>`, `<h2>`, `<ul>`)
+- **Tweetalig (NL/EN)**: vrijwel elk tekstveld is `{ nl: "...", en: "..." }` — pas altijd het `nl`-deel aan en het `en`-deel mee als je kunt. Bezoekers wisselen met de taalknop rechtsboven; de keuze wordt onthouden in de browser.
 
 ## Bestellen
 
@@ -36,3 +37,4 @@ De site kan daarmee uitgebreid worden zonder herbouw.
 - Statische site: HTML/CSS/JavaScript, geen dependencies, geen build-stap, geen tracking
 - Werkt op elke gratis statische host (GitHub Pages, Netlify, Cloudflare Pages)
 - Blog en shop draaien op hash-routering (`#/blog/...`), dus geen server nodig
+- Tweetalig: taalkeuze via knop in de header, opgeslagen in localStorage (`cruquiuscrafts-taal`)
