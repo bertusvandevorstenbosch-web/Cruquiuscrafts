@@ -119,5 +119,23 @@ const BLOGPOSTS = [
 <p>Alles wat ik maak is van steengoed en gebakken op hoge temperatuur: vaatwasserbestendig, ovenbestendig, en gemaakt om elke dag te gebruiken. Niet voor in de kast, maar op tafel.</p>
 <h2>Van tuin naar tafel</h2>
 <p>Het mooiste aan Cruquius Crafts is de cirkel: de schaal die ik draaide, zit binnen een week vol tomatensaus uit onze eigen kas. En de lege mok? Die gaat weer vol met koffie terwijl de volgende oogst alweer wacht.</p>`
+  },
+  {
+    slug: "sojasaus-gestart",
+    titel: "De langste fermentatie die we ooit startten: sojasaus",
+    datum: "2026-04-20",
+    auteur: "Bertus",
+    afbeelding: "images/blog-sojasaus.svg",
+    inleiding: "Vandaag de eerste stap gezet voor onze eigen shoyu: geweekte en gekookte sojabonen, geroosterde tarwe en een koji-cultuur. Over een jaar of twee mag je mee proeven.",
+    tekst: `<p>Eerder maakten we al mede, kombucha en sambal, maar dit is van een andere orde: echte sojasaus. Van boon tot saus duurt het makkelijk een tot twee jaar. Vandaag, 20 april, is dag één.</p>
+<h2>Stap 1: weken</h2>
+<p>De droge sojabonen gaan eerst een nacht de emmer in. Zacht geworden, opgezwollen en klaar voor de volgende stap.</p>
+<h2>Stap 2: koken en roosteren</h2>
+<p>De bonen worden zacht gekookt tot je ze fijn kunt drukken tussen je vingers. De tarwe roosteren we in de pan tot hij lekker naar noten ruikt — dat geeft de saus later haar diepte. Daarna mengen we alles en laten we het mengsel afkoelen op de bakplaat.</p>
+<h2>Stap 3: koji eroverheen</h2>
+<p>Op het afgekoelde bonen-tarwe-mengsel gaat de koji-cultuur (Aspergillus oryzae). Twee dagen in een warme, vochtige omgeving, en dan begint het vanzelf te bloeien met een wit laagje schimmel — precies wat we willen. De enzymen van de koji breken de bonen en het graan straks af tot smaak.</p>
+<h2>En dan: wachten</h2>
+<p>Daarna gaat alles in grote potten met pekel: de moromi. Elke week even roeren, en verder... geduld. Eerste proefronde over een paar maanden, de echte saus hoop ik in de winter van 2027 te kunnen bottelen.</p>
+<p>We houden het op de blog bij — van boon tot druppel.</p>`
   }
 ];
