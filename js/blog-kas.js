@@ -97,14 +97,12 @@ const KASPOSTS = [
 <img class="afbeelding" src="images/20260427_131830_copy_1024x2216.jpg" alt="Verse aarde in de kas" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260428_202034_copy_1024x2216.jpg" alt="De vloer klaar, met gereedschap ernaast" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260429_202013_copy_1024x2216.jpg" alt="De bakken geplaatst" style="margin: 8px 0 16px;">
-<p>Af is hij nog niet — er staat nog een lijstje. Maar van sleuf tot bakken in zes weken, in de avonden en de weekenden ertussen, is niet slecht. Het vervolg volgt op de blog.</p>
-<img class="afbeelding" src="images/20260429_202053_copy_1024x2216.jpg" alt="De ingerichte kas met bakken" style="margin: 8px 0 16px;">`,
+<p>Af is hij nog niet — er staat nog een lijstje. Maar van sleuf tot bakken in zes weken, in de avonden en de weekenden ertussen, is niet slecht. Het vervolg volgt op de blog.</p>`,
       en: `<p>Last week of April: the greenhouse still needed a floor inside. Soil in, levelled out, then the growing beds — still empty, but full of promise. Tools on the wall, door ajar, and then we just stood there looking at it together.</p>
 <img class="afbeelding" src="images/20260427_131830_copy_1024x2216.jpg" alt="Fresh soil inside the greenhouse" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260428_202034_copy_1024x2216.jpg" alt="The finished floor, tools alongside" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260429_202013_copy_1024x2216.jpg" alt="The growing beds in place" style="margin: 8px 0 16px;">
-<p>It's not finished yet — there's still a list. But from trench to growing beds in six weeks, in the evenings and weekends in between, isn't bad at all. To be continued on the blog.</p>
-<img class="afbeelding" src="images/20260429_202053_copy_1024x2216.jpg" alt="The greenhouse, furnished and ready" style="margin: 8px 0 16px;">`
+<p>It's not finished yet — there's still a list. But from trench to growing beds in six weeks, in the evenings and weekends in between, isn't bad at all. To be continued on the blog.</p>`
     }
   }
 ];
