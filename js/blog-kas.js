@@ -70,14 +70,12 @@ const KASPOSTS = [
     tekst: {
       nl: `<p>Dit is het deel waar niemand foto's van wil maken en wij dus toch foto's van maken: frezen. Stofmasker op, veiligheidsbril op, gehoorbescherming op — en dan heel veel hout, tot de avonden op 15 april erop zaten.</p>
 <img class="afbeelding" src="images/20260415_165002_copy_1024x2216.jpg" alt="Frezen, volledig uitgerust met masker en bril" style="margin: 8px 0 16px;">
-<img class="afbeelding" src="images/20260417_205209_copy_1024x2216.jpg" alt="De werkbank met gereedschap, 's avonds" style="margin: 8px 0 16px;">
 <p>Daarna de panelen: polycarbonaat in alle ramen en wanden, paneel voor paneel. Elk paneel past maar op één manier, en dat ontdekte ik op de gebruikelijke manier. Op 25 april stond de kas er bijna: hout, polycarbonaat, en een deur die open kan. Nog niet af — maar vanaf nu groeit hier iets.</p>
 <img class="afbeelding" src="images/20260421_185058_copy_1024x473.jpg" alt="Panelen in de wanden, met zicht op de tuin" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260423_175358_copy_1024x2216.jpg" alt="De kas met de panelen erin" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260425_173409_copy_1024x2216.jpg" alt="De deur op een kier" style="margin: 8px 0 16px;">`,
       en: `<p>This is the part nobody wants photos of, so of course we took photos: routing. Dust mask on, safety glasses on, ear protection on — and a lot of wood, until the evenings of April 15th ran out.</p>
 <img class="afbeelding" src="images/20260415_165002_copy_1024x2216.jpg" alt="Routing wood, fully geared up with mask and glasses" style="margin: 8px 0 16px;">
-<img class="afbeelding" src="images/20260417_205209_copy_1024x2216.jpg" alt="The workbench with tools, in the evening" style="margin: 8px 0 16px;">
 <p>Then the panels: polycarbonate in all the windows and walls, panel by panel. Every panel only fits one way, which I discovered in the usual way. By April 25th the greenhouse almost stood there: wood, polycarbonate, and a door that opens. Not finished yet — but from now on, things grow here.</p>
 <img class="afbeelding" src="images/20260421_185058_copy_1024x473.jpg" alt="Panels in the walls, garden in view" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260423_175358_copy_1024x2216.jpg" alt="The greenhouse with its panels in place" style="margin: 8px 0 16px;">
