@@ -153,6 +153,9 @@ main { max-width: 960px; margin: 0 auto; padding: 24px 18px 60px; }
 /* blog */
 .post-kaart .datum { font-size: 0.78rem; color: var(--grijs); font-style: italic; }
 .artikel { max-width: 680px; margin: 0 auto; }
+/* Paragrafen die direct in het artikel staan (o.a. Over ons) ook netjes van
+   witruimte voorzien — blogs gebruiken .artikel .tekst p hieronder. */
+.artikel > p { margin-bottom: 14px; }
 .artikel .terug { font-size: 0.88rem; text-decoration: none; display: inline-block; margin-bottom: 14px; }
 .artikel h1 { font-size: 1.7rem; color: var(--donker); margin-bottom: 6px; }
 .artikel .meta { color: var(--grijs); font-size: 0.88rem; font-style: italic; margin-bottom: 20px; }
