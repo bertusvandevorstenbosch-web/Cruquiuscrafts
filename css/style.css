@@ -156,9 +156,8 @@ main { max-width: 960px; margin: 0 auto; padding: 24px 18px 60px; }
 .artikel .terug { font-size: 0.88rem; text-decoration: none; display: inline-block; margin-bottom: 14px; }
 .artikel h1 { font-size: 1.7rem; color: var(--donker); margin-bottom: 6px; }
 .artikel .meta { color: var(--grijs); font-size: 0.88rem; font-style: italic; margin-bottom: 20px; }
-.artikel .afbeelding { width: 100%; border-radius: 14px; margin-bottom: 20px; }
-/* Foto's middenin de blogtekst: compacter en gecentreerd (cover blijft breed) */
-.artikel .tekst .afbeelding {
+/* Foto's in blogposts (cover én middenin de tekst): compacter en gecentreerd */
+.artikel .afbeelding {
   display: block;
   width: auto;
   height: auto;
@@ -166,6 +165,8 @@ main { max-width: 960px; margin: 0 auto; padding: 24px 18px 60px; }
   max-height: 520px;
   margin-left: auto !important;
   margin-right: auto !important;
+  border-radius: 14px;
+  margin-bottom: 20px;
 }
 .artikel .tekst p { margin-bottom: 14px; font-size: 1.02rem; }
 .artikel .tekst h2 { font-size: 1.2rem; margin: 22px 0 8px; color: var(--donker); }
