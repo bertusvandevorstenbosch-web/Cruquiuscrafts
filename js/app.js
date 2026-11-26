@@ -106,11 +106,11 @@ const TEKSTEN = {
   },
   footerOndertitel: { nl: "urban boerderij in Cruquius", en: "urban farm in Cruquius" },
   footerAppLink: { nl: "Onze moestuin-app", en: "Our garden app" },
-  footerTag: { nl: "Handgemaakt · Seizoensgebonden · Soms mislukt", en: "Handmade · Seasonal · Sometimes it fails" },
+  footerTag: { nl: "Handgemaakt · Seizoensgebonden · Soms mislukt", en: "Handmade · Seasonal · Failures included" },
   bertKop: { nl: "Bert — hout &amp; keuken", en: "Bert — wood &amp; kitchen" },
   bertTekst: {
     nl: "Spiegels en snijplanken uit eigen zaagwerk, fermenten, siropen van echte wortels en fruit — tot de pot dicht moet. Mislukte experimenten? Die lees je gewoon als blogpost.",
-    en: "Mirrors and cutting boards from his own saw work, ferments, syrups from real roots and fruit — until the lid goes on. Failed experiments? You'll simply read about them as blog posts."
+    en: "Mirrors and cutting boards from his own saw work, ferments, syrups from real roots and fruit — until the lid goes on. Failed experiments? Those live on as blog posts."
   },
   annaKop: { nl: "Anna — keramiek", en: "Anna — ceramics" },
   annaTekst: {
@@ -324,8 +324,8 @@ const OVER_EN = `
       build and make all kinds of things — and as Cruquius Crafts we show how it's done,
       including the things that fail. <strong>Especially those.</strong></p>
       <p>Bert does the projects: a greenhouse that doubles as a chicken coop, soy sauce that
-      started five months later than planned, a tomato jungle that "simply happened to him",
-      jam from the ditch behind the house, and homemade soda syrups. Anna makes ceramics
+      started five months later than planned, a tomato jungle that "just sort of happened",
+      jam from whatever grows along the ditch out back, and homemade soda syrups. Anna makes ceramics
       and makes sure it all looks good too.</p>
       <p>We're not farmers and not professionals — just two people with a bigger back garden
       than is sensible. What we learn, we share here. Anna is American and her family reads
