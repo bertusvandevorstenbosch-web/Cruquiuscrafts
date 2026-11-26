@@ -70,6 +70,25 @@ const TEKSTEN = {
   verhaalLeeg: { nl: "Dit verhaal bestaat niet (meer).", en: "This story no longer exists." },
   winkelLeeg: { nl: "De winkel is nog even leeg. Zodra de werkplaats of de keuken iets nieuws oplevert, vind je het hier — of stel gerust alvast iets voor via WhatsApp.", en: "The shop is empty for now. As soon as the workshop or the kitchen produces something new, you'll find it here — or feel free to already reach out via WhatsApp." },
   workshopsLeeg: { nl: "Er staat nog geen workshop gepland. Zodra we er een geven, lees je het hier als eerste.", en: "No workshop is scheduled yet. As soon as we host one, you'll read about it here first." },
+  buurtKop: { nl: "Van de buurt", en: "From the neighbourhood" },
+  buurtIntro: {
+    nl: "Wij zijn niet de enigeen die met handen bezig zijn. Op deze pagina laten we buren en bezoekers aan het woord: wat heb jij gemaakt, gekweekt of gebrouwen?",
+    en: "We're not the only ones busy making things. On this page, neighbours and visitors get the floor: what have you made, grown or brewed?"
+  },
+  buurtLeeg: {
+    nl: "Ook iets gemaakt of gekweekt waar je trots op bent? Stuur je verhaal met foto's via WhatsApp — van moestuin tot werkbank, we plaatsen het graag.",
+    en: "Made or grown something you're proud of? Send us your story with photos via WhatsApp — from vegetable garden to workbench, we'd love to share it."
+  },
+  buurtStuur: { nl: "Stuur je verhaal via WhatsApp", en: "Send your story via WhatsApp" },
+  buurtBericht: {
+    nl: "Hallo! Ik heb iets gemaakt of gekweekt en wil graag mijn verhaal delen op Van de buurt.",
+    en: "Hi! I made or grew something and would love to share my story on From the neighbourhood."
+  },
+  buurtThuisKop: { nl: "Ook iets gemaakt of gekweekt?", en: "Made or grown something yourself?" },
+  buurtThuisTekst: {
+    nl: "De buurt maakt mee. Deel je verhaal op onze pagina Van de buurt.",
+    en: "The neighbourhood makes things too. Share your story on our From the neighbourhood page."
+  },
   nietGevonden: {
     nl: "Pagina niet gevonden. <a href=\"#/\">Terug naar home</a>",
     en: "Page not found. <a href=\"#/\">Back to home</a>"
@@ -183,6 +202,14 @@ views.home = function () {
             </div>
           </a>`).join("")}
       </div>
+    </section>
+
+    <section class="sectie">
+      <div class="contact-blok" style="text-align:center;">
+        <h2 style="margin-bottom:6px;">${t(TEKSTEN.buurtThuisKop)}</h2>
+        <p style="margin-bottom:14px;">${t(TEKSTEN.buurtThuisTekst)}</p>
+        <a class="knop groen" target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.buurtBericht))}">${t(TEKSTEN.buurtStuur)}</a>
+      </div>
     </section>`;
 };
 
@@ -206,6 +233,30 @@ views.workshops = function () {
     <p style="max-width:640px; color:var(--grijs); margin-bottom:20px;">
       ${t(TEKSTEN.workshopsIntro)}</p>
     ${WORKSHOPS.length ? `<div class="grid">${WORKSHOPS.map(workshopKaart).join("")}</div>` : `<div class="leeg">${t(TEKSTEN.workshopsLeeg)}</div>`}`;
+};
+
+views.buurt = function () {
+  const posts = BLOGPOSTS.filter(p => p.buurt);
+  return `
+    <div class="sectie-kop"><h2>${t(TEKSTEN.buurtKop)}</h2></div>
+    <p style="max-width:640px; color:var(--grijs); margin-bottom:20px;">
+      ${t(TEKSTEN.buurtIntro)}</p>
+    ${posts.length ? `
+    <div class="grid">
+      ${posts.map(p => `
+        <a class="kaart post-kaart" href="#/blog/${p.slug}" style="text-decoration:none; color:inherit;">
+          <img class="afbeelding" src="${p.afbeelding}" alt="">
+          <div class="inhoud">
+            <div class="datum">${nldatum(p.datum)} · ${p.auteur}</div>
+            <h3>${t(p.titel)}</h3>
+            <p class="beschrijving">${t(p.inleiding)}</p>
+          </div>
+        </a>`).join("")}
+    </div>` : ""}
+    <div class="leeg" style="margin-top: ${posts.length ? "26px" : "0"};">
+      <p>${t(TEKSTEN.buurtLeeg)}</p>
+      <p style="margin-top:14px;"><a class="knop groen" target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.buurtBericht))}">${t(TEKSTEN.buurtStuur)}</a></p>
+    </div>`;
 };
 
 views.blog = function () {
@@ -303,6 +354,7 @@ function render() {
   if (hash === "") html = views.home();
   else if (delen[0] === "winkel") html = views.winkel();
   else if (delen[0] === "workshops") html = views.workshops();
+  else if (delen[0] === "buurt") html = views.buurt();
   else if (delen[0] === "blog" && delen[1]) html = views.blogPost(delen[1]);
   else if (delen[0] === "blog") html = views.blog();
   else if (delen[0] === "over" || delen[0] === "contact") html = taal === "en" ? views.overEn() : views.over();
