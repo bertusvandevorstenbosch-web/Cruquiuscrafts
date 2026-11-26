@@ -25,7 +25,7 @@ const CIDERPOSTS = [
 <img class="afbeelding" src="images/20260917_151345_copy_437x946.jpg" alt="Gistingsglas met slang aan het gistende sap" style="margin: 8px 0 16px;">
 <img class="afbeelding" src="images/20260917_160433_copy_437x946.jpg" alt="Vers geperst sap klaar voor de fermentatie" style="margin: 8px 0 16px;">
 <p>Ruim vier weken later was het zover: bottelen. En proeven, natuurlijk &mdash; de glazen hoorden erbij.</p>
-<img class="afbeelding" src="images/20261016_154502_copy_2048x946.jpg" alt="Het eindresultaat gropws op tafel, klaar om te proeven" style="margin: 8px 0 16px;">
+<img class="afbeelding" src="images/20261016_154502_copy_2048x946.jpg" alt="Het eindresultaat groots op tafel, klaar om te proeven" style="margin: 8px 0 16px;">
 <p>Uiteindelijk stonden er 23 flessen op de teller: 8 appel en 14 peer. Niet elke fles zal even goed zijn, dat is het spel &mdash; maar thuisgemaakt van eigen fruit smaakt naar meer. Op naar volgend jaar, met hopelijk nog meer vruchten.</p>`,
       en: `<p>We have a few trees in the garden. This year's harvest wasn't spectacular, but plenty for a fun experiment: cider. Apples and pears, together in one batch.</p>
 <img class="afbeelding" src="images/20260912_112304_copy_437x946.jpg" alt="Picked apples in a tub" style="margin: 8px 0 16px;">
