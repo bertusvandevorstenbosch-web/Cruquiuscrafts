@@ -8,111 +8,117 @@ const SITE = {
   plaats: { nl: "Cruquius", en: "Cruquius" }
 };
 
-const PRODUCTEN = [
-  {
-    id: "mok-handgreep",
-    naam: { nl: "Mok met handgreep", en: "Mug with handle" },
-    soort: "ceramiek",
-    prijs: 24.5,
-    afbeelding: "images/product-mok.svg",
-    beschrijving: {
-      nl: "Handgedraaide mok van steengoed, met een zachte speelse handgreep. Elke mok is uniek.",
-      en: "Hand-thrown stoneware mug with a soft, playful handle. Every mug is unique."
-    },
-    opVoorraad: true
-  },
-  {
-    id: "schaal-oivorm",
-    naam: { nl: "Ovale schaal", en: "Oval serving dish" },
-    soort: "ceramiek",
-    prijs: 32,
-    afbeelding: "images/product-schaal.svg",
-    beschrijving: {
-      nl: "Ovale serveerschaal in aardetinten. Mooi voor salades uit eigen tuin — of gewoon voor elke dag.",
-      en: "Oval serving dish in earthy tones. Beautiful for salads from our own garden — or for every day."
-    },
-    opVoorraad: true
-  },
-  {
-    id: "kom-set",
-    naam: { nl: "Set van twee kommen", en: "Set of two bowls" },
-    soort: "ceramiek",
-    prijs: 45,
-    afbeelding: "images/product-kom.svg",
-    beschrijving: {
-      nl: "Twee kommen die precies in elkaar passen. Glazuur varieert per stook — dat is het charmante.",
-      en: "Two bowls that nest perfectly. The glaze varies with every firing — that's the charm."
-    },
-    opVoorraad: false
-  },
-  {
-    id: "tomatensaus",
-    naam: { nl: "Tomatensaus (pot 350 ml)", en: "Tomato sauce (350 ml jar)" },
-    soort: "keuken",
-    prijs: 6.5,
-    afbeelding: "images/product-saus.svg",
-    beschrijving: {
-      nl: "Langzaam gestoofde saus van onze eigen tomaten, met basilicum en knoflook uit de kas. Seizoensproduct.",
-      en: "Slow-simmered sauce from our own tomatoes, with basil and garlic from the greenhouse. A seasonal product."
-    },
-    opVoorraad: true
-  },
-  {
-    id: "kruidenzout",
-    naam: { nl: "Kruidenzout uit de tuin", en: "Garden herb salt" },
-    soort: "keuken",
-    prijs: 4.5,
-    afbeelding: "images/product-zout.svg",
-    beschrijving: {
-      nl: "Grof zout met gedroogde tuinkruiden: tijm, salie, rozemarijn en een snufje chilipeper.",
-      en: "Coarse salt with dried garden herbs: thyme, sage, rosemary and a pinch of chili pepper."
-    },
-    opVoorraad: true
-  },
-  {
-    id: "droge-bonen",
-    naam: { nl: "Droge bonen (250 g)", en: "Dried beans (250 g)" },
-    soort: "keuken",
-    prijs: 3.5,
-    afbeelding: "images/product-bonen.svg",
-    beschrijving: {
-      nl: "Zelfgedroogde pronkbonen van het afgelopen seizoen. Perfect voor soep of als bijgerecht.",
-      en: "Runner beans, dried ourselves last season. Perfect for soup or as a side dish."
-    },
-    opVoorraad: true
-  }
-];
+// PRODUCTEN staat (even) leeg tot er echt iets wordt aangeboden.
+// De eerdere voorbeelddata staat hieronder in commentaar, klaar om terug te zetten.
+const PRODUCTEN = [];
+// const PRODUCTEN = [
+//   {
+//     id: "mok-handgreep",
+//     naam: { nl: "Mok met handgreep", en: "Mug with handle" },
+//     soort: "ceramiek",
+//     prijs: 24.5,
+//     afbeelding: "images/product-mok.svg",
+//     beschrijving: {
+//       nl: "Handgedraaide mok van steengoed, met een zachte speelse handgreep. Elke mok is uniek.",
+//       en: "Hand-thrown stoneware mug with a soft, playful handle. Every mug is unique."
+//     },
+//     opVoorraad: true
+//   },
+//   {
+//     id: "schaal-oivorm",
+//     naam: { nl: "Ovale schaal", en: "Oval serving dish" },
+//     soort: "ceramiek",
+//     prijs: 32,
+//     afbeelding: "images/product-schaal.svg",
+//     beschrijving: {
+//       nl: "Ovale serveerschaal in aardetinten. Mooi voor salades uit eigen tuin — of gewoon voor elke dag.",
+//       en: "Oval serving dish in earthy tones. Beautiful for salads from our own garden — or for every day."
+//     },
+//     opVoorraad: true
+//   },
+//   {
+//     id: "kom-set",
+//     naam: { nl: "Set van twee kommen", en: "Set of two bowls" },
+//     soort: "ceramiek",
+//     prijs: 45,
+//     afbeelding: "images/product-kom.svg",
+//     beschrijving: {
+//       nl: "Twee kommen die precies in elkaar passen. Glazuur varieert per stook — dat is het charmante.",
+//       en: "Two bowls that nest perfectly. The glaze varies with every firing — that's the charm."
+//     },
+//     opVoorraad: false
+//   },
+//   {
+//     id: "tomatensaus",
+//     naam: { nl: "Tomatensaus (pot 350 ml)", en: "Tomato sauce (350 ml jar)" },
+//     soort: "keuken",
+//     prijs: 6.5,
+//     afbeelding: "images/product-saus.svg",
+//     beschrijving: {
+//       nl: "Langzaam gestoofde saus van onze eigen tomaten, met basilicum en knoflook uit de kas. Seizoensproduct.",
+//       en: "Slow-simmered sauce from our own tomatoes, with basil and garlic from the greenhouse. A seasonal product."
+//     },
+//     opVoorraad: true
+//   },
+//   {
+//     id: "kruidenzout",
+//     naam: { nl: "Kruidenzout uit de tuin", en: "Garden herb salt" },
+//     soort: "keuken",
+//     prijs: 4.5,
+//     afbeelding: "images/product-zout.svg",
+//     beschrijving: {
+//       nl: "Grof zout met gedroogde tuinkruiden: tijm, salie, rozemarijn en een snufje chilipeper.",
+//       en: "Coarse salt with dried garden herbs: thyme, sage, rosemary and a pinch of chili pepper."
+//     },
+//     opVoorraad: true
+//   },
+//   {
+//     id: "droge-bonen",
+//     naam: { nl: "Droge bonen (250 g)", en: "Dried beans (250 g)" },
+//     soort: "keuken",
+//     prijs: 3.5,
+//     afbeelding: "images/product-bonen.svg",
+//     beschrijving: {
+//       nl: "Zelfgedroogde pronkbonen van het afgelopen seizoen. Perfect voor soep of als bijgerecht.",
+//       en: "Runner beans, dried ourselves last season. Perfect for soup or as a side dish."
+//     },
+//     opVoorraad: true
+//   }
+// ];
 
-const WORKSHOPS = [
-  {
-    id: "pottenbakken-intro",
-    naam: { nl: "Pottenbakken voor beginners", en: "Pottery for beginners" },
-    type: "ceramiek",
-    datum: "2026-06-14",
-    duur: { nl: "2,5 uur", en: "2.5 hours" },
-    prijs: 45,
-    plekken: 6,
-    beschrijving: {
-      nl: "Anna neemt je mee op de draaischijf: van klomp klei naar je eigen mok. Inclusief materiaal, stook en een kop koffie uit eigen tuin.",
-      en: "Anna takes you to the wheel: from a lump of clay to your own mug. Including materials, firing and a cup of coffee from our own garden."
-    },
-    opVoorraad: true
-  },
-  {
-    id: "koken-met-de-oogst",
-    naam: { nl: "Koken met de oogst", en: "Cooking with the harvest" },
-    type: "keuken",
-    datum: "2026-06-28",
-    duur: { nl: "3 uur", en: "3 hours" },
-    prijs: 55,
-    plekken: 8,
-    beschrijving: {
-      nl: "We oogsten samen in de moestuin en koken een volledig seizoensmenu. Met receptenkaart om mee naar huis te nemen.",
-      en: "We harvest together in the vegetable garden and cook a full seasonal menu. Includes a recipe card to take home."
-    },
-    opVoorraad: true
-  }
-];
+// WORKSHOPS staat (even) leeg tot er echt iets wordt aangeboden.
+// De eerdere voorbeelddata staat hieronder in commentaar, klaar om terug te zetten.
+const WORKSHOPS = [];
+// const WORKSHOPS = [
+//   {
+//     id: "pottenbakken-intro",
+//     naam: { nl: "Pottenbakken voor beginners", en: "Pottery for beginners" },
+//     type: "ceramiek",
+//     datum: "2026-06-14",
+//     duur: { nl: "2,5 uur", en: "2.5 hours" },
+//     prijs: 45,
+//     plekken: 6,
+//     beschrijving: {
+//       nl: "Anna neemt je mee op de draaischijf: van klomp klei naar je eigen mok. Inclusief materiaal, stook en een kop koffie uit eigen tuin.",
+//       en: "Anna takes you to the wheel: from a lump of clay to your own mug. Including materials, firing and a cup of coffee from our own garden."
+//     },
+//     opVoorraad: true
+//   },
+//   {
+//     id: "koken-met-de-oogst",
+//     naam: { nl: "Koken met de oogst", en: "Cooking with the harvest" },
+//     type: "keuken",
+//     datum: "2026-06-28",
+//     duur: { nl: "3 uur", en: "3 hours" },
+//     prijs: 55,
+//     plekken: 8,
+//     beschrijving: {
+//       nl: "We oogsten samen in de moestuin en koken een volledig seizoensmenu. Met receptenkaart om mee naar huis te nemen.",
+//       en: "We harvest together in the vegetable garden and cook a full seasonal menu. Includes a recipe card to take home."
+//     },
+//     opVoorraad: true
+//   }
+// ];
 
 const BLOGPOSTS = [
   {

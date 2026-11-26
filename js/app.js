@@ -68,6 +68,8 @@ const TEKSTEN = {
   blogKop: { nl: "Blog", en: "Blog" },
   overKop: { nl: "Over ons", en: "About us" },
   verhaalLeeg: { nl: "Dit verhaal bestaat niet (meer).", en: "This story no longer exists." },
+  winkelLeeg: { nl: "De winkel is nog even leeg. Zodra de werkplaats of de keuken iets nieuws oplevert, vind je het hier — of stel gerust alvast iets voor via WhatsApp.", en: "The shop is empty for now. As soon as the workshop or the kitchen produces something new, you'll find it here — or feel free to already reach out via WhatsApp." },
+  workshopsLeeg: { nl: "Er staat nog geen workshop gepland. Zodra we er een geven, lees je het hier als eerste.", en: "No workshop is scheduled yet. As soon as we host one, you'll read about it here first." },
   nietGevonden: {
     nl: "Pagina niet gevonden. <a href=\"#/\">Terug naar home</a>",
     en: "Page not found. <a href=\"#/\">Back to home</a>"
@@ -162,10 +164,11 @@ views.home = function () {
       </div>
     </section>
 
+    ${inDeShop.length ? `
     <section class="sectie">
       <div class="sectie-kop"><h2>${t(TEKSTEN.nieuwInWinkel)}</h2><a href="#/winkel">${t(TEKSTEN.allesBekijken)}</a></div>
       <div class="grid">${inDeShop.map(productKaart).join("")}</div>
-    </section>
+    </section>` : ""}
 
     <section class="sectie">
       <div class="sectie-kop"><h2>${t(TEKSTEN.vanHetBlog)}</h2><a href="#/blog">${t(TEKSTEN.alleVerhalen)}</a></div>
@@ -190,10 +193,11 @@ views.winkel = function () {
     <div class="sectie-kop"><h2>${t(TEKSTEN.winkelKop)}</h2></div>
     <p style="max-width:640px; color:var(--grijs); margin-bottom:20px;">
       ${t(TEKSTEN.winkelIntro)}</p>
+    ${PRODUCTEN.length === 0 ? `<div class="leeg">${t(TEKSTEN.winkelLeeg)}</div>` : `
     <h2 style="font-size:1.15rem; margin-bottom:12px;">${t(TEKSTEN.ceramiekKop)}</h2>
     <div class="grid">${ceramiek.map(productKaart).join("")}</div>
     <h2 style="font-size:1.15rem; margin:28px 0 12px;">${t(TEKSTEN.keukenKop)}</h2>
-    <div class="grid">${keuken.map(productKaart).join("")}</div>`;
+    <div class="grid">${keuken.map(productKaart).join("")}</div>`}`;
 };
 
 views.workshops = function () {
@@ -201,7 +205,7 @@ views.workshops = function () {
     <div class="sectie-kop"><h2>${t(TEKSTEN.workshopsKop)}</h2></div>
     <p style="max-width:640px; color:var(--grijs); margin-bottom:20px;">
       ${t(TEKSTEN.workshopsIntro)}</p>
-    <div class="grid">${WORKSHOPS.map(workshopKaart).join("")}</div>`;
+    ${WORKSHOPS.length ? `<div class="grid">${WORKSHOPS.map(workshopKaart).join("")}</div>` : `<div class="leeg">${t(TEKSTEN.workshopsLeeg)}</div>`}`;
 };
 
 views.blog = function () {
