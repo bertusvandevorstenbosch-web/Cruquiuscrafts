@@ -292,20 +292,20 @@ views.over = function () {
   return `
     <div class="sectie-kop"><h2>${t(TEKSTEN.overKop)}</h2></div>
     <div class="artikel">
-      <p>Hoi, wij zijn <strong>Bert en Anna</strong>! We wonen in De Cruquius, in de schaduw
-      van het gemaal, en we kunnen niet stilzitten.</p>
-      <p>Wat we ook doen, het draait om hetzelfde: <strong>dingen zelf maken</strong>.
-      Bert zaagt, freest en lijmt hout tot spiegels en snijplanken, en fermenteert van alles
-      tot Anna zegt dat de pot dicht moet. Hij trekt ook siropen van echte wortels en fruit,
-      maar dat is er maar één van. Anna draait keramiek: mokken en schaaltjes waar je
-      liever uit drinkt dan uit je gewone servies.</p>
-      <p>Veel komt van ons eigen erf. De rest halen we zo dichtbij en eerlijk mogelijk.
-      Geen troep, wel voldoening.</p>
-      <p>Op deze site laten we zien wat we maken en hoe. Soms lukt het in één keer,
-      soms niet, en dat vertellen we dan ook. Wil je weten wat we nu onder handen hebben?
-      Blijf gerust rondkijken.</p>
-      <p class="slotzin"><em>We maken alleen wat we leuk vinden, dus soms is iets op.
-      Dat is geen foutje, dat is de bedoeling.</em></p>
+      <p>Wij zijn <strong>Bert en Anna</strong>. Op 460 m² in De Cruquius kweken, fermenteren,
+      bouwen en maken we van alles, en onder de naam Cruquius Crafts laten we zien hoe dat gaat.
+      Inclusief de dingen die mislukken. <strong>Vooral die.</strong></p>
+      <p>Bert doet de projecten: een kas die ook kippenhok is, sojasaus die vijf maanden later
+      begon dan gepland, een tomatenjungle die hem "gewoon overkwam", jam van de sloot achter
+      het huis en zelfgemaakte frisdranksiropen. Anna maakt keramiek en zorgt ervoor dat het
+      ook mooi wordt.</p>
+      <p>We zijn geen boeren en geen professionals, alleen twee mensen met een grotere
+      achtertuin dan verstandig is. Wat we leren, delen we hier. Anna is Amerikaans en haar
+      familie leest mee, dus je vindt alles in het Nederlands én het Engels.</p>
+      <p>Dan de rest van het team: <strong>Ollie</strong> (hond, houdt toezicht),
+      <strong>Miles</strong> (kat, houdt zich erbuiten) en <strong>vijf kippen</strong>.
+      Lucy had even pensioen genomen, maar is weer aan het werk.</p>
+      <p class="slotzin"><em>Van zaadje tot sambal.</em></p>
       <div class="contact-blok">
         <strong>${t(TEKSTEN.contactVraag)}</strong><br>
         ${t(TEKSTEN.contactVia)}<a target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.groet))}">WhatsApp</a>
@@ -320,20 +320,20 @@ views.contact = views.over;
 const OVER_EN = `
     <div class="sectie-kop"><h2>${TEKSTEN.overKop.en}</h2></div>
     <div class="artikel">
-      <p>Hi, we're <strong>Bert and Anna</strong>! We live in De Cruquius, in the shadow
-      of the pumping station, and we can't sit still.</p>
-      <p>Whatever we do, it always comes down to the same thing: <strong>making things ourselves</strong>.
-      Bert saws, routs and glues wood into mirrors and cutting boards, and ferments everything
-      until Anna says the jar needs sealing. He also makes syrups from real roots and fruit,
-      but that's just one of many things. Anna throws pottery: mugs and little bowls you'd
-      rather drink from than your everyday tableware.</p>
-      <p>Much of it comes from our own plot. The rest we source as locally and honestly as we can.
-      No junk, just satisfaction.</p>
-      <p>On this site we show what we make and how. Sometimes it works on the first try,
-      sometimes it doesn't, and we tell you about that too. Want to know what we're working
-      on right now? Feel free to look around.</p>
-      <p class="slotzin"><em>We only make what we enjoy, so sometimes something is sold out.
-      That's not a mistake, that's the idea.</em></p>
+      <p>We are <strong>Bert and Anna</strong>. On 460 m² in De Cruquius we grow, ferment,
+      build and make all kinds of things — and as Cruquius Crafts we show how it's done,
+      including the things that fail. <strong>Especially those.</strong></p>
+      <p>Bert does the projects: a greenhouse that doubles as a chicken coop, soy sauce that
+      started five months later than planned, a tomato jungle that "simply happened to him",
+      jam from the ditch behind the house, and homemade soda syrups. Anna makes ceramics
+      and makes sure it all looks good too.</p>
+      <p>We're not farmers and not professionals — just two people with a bigger back garden
+      than is sensible. What we learn, we share here. Anna is American and her family reads
+      along, so you'll find everything in Dutch and English.</p>
+      <p>As for the rest of the team: <strong>Ollie</strong> (dog, supervises),
+      <strong>Miles</strong> (cat, stays out of it) and <strong>five chickens</strong>.
+      Lucy had even taken early retirement, but is back at work.</p>
+      <p class="slotzin"><em>From seed to sambal.</em></p>
       <div class="contact-blok">
         <strong>${t(TEKSTEN.contactVraag)}</strong><br>
         ${t(TEKSTEN.contactVia)}<a target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.groet))}">WhatsApp</a>
