@@ -106,11 +106,11 @@ const TEKSTEN = {
   },
   footerOndertitel: { nl: "urban boerderij in Cruquius", en: "urban farm in Cruquius" },
   footerAppLink: { nl: "Onze moestuin-app", en: "Our garden app" },
-  footerTag: { nl: "Handgemaakt · Seizoensgebonden · Lokaal", en: "Handmade · Seasonal · Local" },
+  footerTag: { nl: "Handgemaakt · Seizoensgebonden · Soms mislukt", en: "Handmade · Seasonal · Sometimes it fails" },
   bertKop: { nl: "Bert — hout &amp; keuken", en: "Bert — wood &amp; kitchen" },
   bertTekst: {
-    nl: "Spiegels en snijplanken uit eigen zaagwerk, fermenten, siropen van echte wortels en fruit — tot de pot dicht moet.",
-    en: "Mirrors and cutting boards from his own saw work, ferments, syrups from real roots and fruit — until the lid goes on."
+    nl: "Spiegels en snijplanken uit eigen zaagwerk, fermenten, siropen van echte wortels en fruit — tot de pot dicht moet. Mislukte experimenten? Die lees je gewoon als blogpost.",
+    en: "Mirrors and cutting boards from his own saw work, ferments, syrups from real roots and fruit — until the lid goes on. Failed experiments? You'll simply read about them as blog posts."
   },
   annaKop: { nl: "Anna — keramiek", en: "Anna — ceramics" },
   annaTekst: {
