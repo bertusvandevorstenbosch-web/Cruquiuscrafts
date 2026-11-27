@@ -94,10 +94,33 @@ const TEKSTEN = {
   formulierOnderwerpContact: { nl: "Bericht via de website", en: "Message via the website" },
   contactDirect: { nl: "Liever direct mailen? ", en: "Prefer to email directly? " },
   bedanktKop: { nl: "Bedankt! 🌱", en: "Thank you! 🌱" },
-  bedanktTekst: {
-    nl: "Je bericht is onderweg naar onze mailbox. We schrijven terug zodra de kippen het toelaten.",
-    en: "Your message is on its way to our mailbox. We'll write back as soon as the chickens allow it."
-  },
+  // Willekeurige bedankt-regel bij elke verzending (kan er ook één bij of uit)
+  bedanktTeksten: [
+    {
+      nl: "Je bericht is onderweg naar onze mailbox. We schrijven terug zodra de kippen het toelaten.",
+      en: "Your message is on its way to our mailbox. We'll write back as soon as the chickens allow it."
+    },
+    {
+      nl: "Binnengekomen! Ollie heeft hem al goedgekeurd. Een antwoord van een mens volgt zo snel mogelijk.",
+      en: "Received! Ollie has already approved it. A reply from an actual human will follow shortly."
+    },
+    {
+      nl: "Je bericht ligt in de mailbox. We reageren meestal sneller dan de sojasaus \u2014 en die duurde vijf maanden, dus dat moet lukken.",
+      en: "Your message is in the mailbox. We usually reply faster than our soy sauce \u2014 which took five months, so the bar is on the floor."
+    },
+    {
+      nl: "Verstuurd! Antwoorden rijpen bij ons doorgaans sneller dan de vissaus. Hoewel.",
+      en: "Sent! Our replies usually ripen faster than the fish sauce. Then again."
+    },
+    {
+      nl: "Het is binnen. We schrijven terug voordat de tomaten de kans krijgen de kas weer over te nemen.",
+      en: "It made it in. We'll write back before the tomatoes get any ideas about the greenhouse again."
+    },
+    {
+      nl: "Je bericht is veilig aangekomen, ergens tussen de jam en de sambal. We mailen je terug.",
+      en: "Your message arrived safely, somewhere between the jam and the sambal. We'll email you back."
+    }
+  ],
   uitverkocht: { nl: "uitverkocht", en: "sold out" },
   vol: { nl: "vol", en: "full" },
   soort: {
@@ -382,10 +405,12 @@ views.over = function () {
 views.contact = views.over;
 
 views.bedankt = function () {
+  const varianten = TEKSTEN.bedanktTeksten;
+  const gekozen = varianten[Math.floor(Math.random() * varianten.length)];
   return `
     <div class="leeg">
       <h2>${t(TEKSTEN.bedanktKop)}</h2>
-      <p style="margin-top:10px;">${t(TEKSTEN.bedanktTekst)}</p>
+      <p style="margin-top:10px;">${t(gekozen)}</p>
       <p style="margin-top:14px;"><a class="knop groen klein" href="#/">${t(TEKSTEN.nav.home)}</a></p>
     </div>`;
 };
