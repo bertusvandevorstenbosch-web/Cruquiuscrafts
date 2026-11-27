@@ -1,5 +1,9 @@
 // Cruquius Crafts site: routering, taalkeuze en weergave.
 
+// Alle blogposts op datum zetten (nieuwste eerst), ongeacht in welke volgorde
+// de postbestanden ze toevoegen. ISO-datums sorteren gewoon alfabetisch.
+BLOGPOSTS.sort((a, b) => (a.datum < b.datum ? 1 : a.datum > b.datum ? -1 : 0));
+
 function huidigeTaal() {
   try {
     return localStorage.getItem("cruquiuscrafts-taal") || "nl";
