@@ -302,6 +302,14 @@ views.over = function () {
       <p>We zijn geen boeren en geen professionals, alleen twee mensen met een grotere
       achtertuin dan verstandig is. Wat we leren, delen we hier. Anna is Amerikaans en haar
       familie leest mee, dus je vindt alles in het Nederlands én het Engels.</p>
+            <p>Waarom doen we dit? Eigenlijk voor drie redenen. <strong>E&eacute;n: we willen gezonder
+      leven</strong> &mdash; en ja, dat begon met zelfgemaakte cider, dat moet je dan maar even voor
+      lief nemen. <strong>Twee: we willen minder afhankelijk van de winkel.</strong> Wat bleek: heel
+      veel is verrassend goed zelf te maken &mdash; zonder E-nummers, zonder kleurstoffen, zonder
+      ingredi&euml;nten waarvan niemand weet wat ze doen &mdash; en als je het niet kunt uitspreken, is
+      het meestal ook niet goed voor je. <strong>Drie: we hopen anderen te motiveren hetzelfde te
+      doen.</strong> En dus delen we niet alleen wat lukt, maar &oacute;&oacute;k onze missers &mdash;
+      zodat jij niet dezelfde fouten maakt als wij. Lachen om onze fouten mag trouwens ook.</p>
       <p>Dan de rest van het team: <strong>Ollie</strong> (hond, houdt toezicht),
       <strong>Miles</strong> (kat, houdt zich erbuiten) en <strong>vijf kippen</strong>.
       Lucy had even pensioen genomen, maar is weer aan het werk.</p>
@@ -330,6 +338,14 @@ const OVER_EN = `
       <p>We're not farmers and not professionals — just two people with a bigger back garden
       than is sensible. What we learn, we share here. Anna is American and her family reads
       along, so you'll find everything in Dutch and English.</p>
+            <p>Why do we do this? Three reasons. <strong>One: we want to live healthier</strong> &mdash;
+      and yes, that apparently started with homemade cider, we're choosing not to see the irony.
+      <strong>Two: we want to depend less on the supermarket.</strong> Turns out a surprising amount
+      is very makeable at home &mdash; no E-numbers, no colorings, no ingredients you can't
+      pronounce &mdash; and if you can't pronounce it, it's usually not good for you either.
+      <strong>Three: we hope to inspire others to do the same.</strong> Which is why we share not
+      only what works, but also our mistakes &mdash; so you don't have to make the same ones we did.
+      Laughing at our mistakes is allowed too.</p>
       <p>As for the rest of the team: <strong>Ollie</strong> (dog, supervises),
       <strong>Miles</strong> (cat, stays out of it) and <strong>five chickens</strong>.
       Lucy had even taken early retirement, but is back at work.</p>
