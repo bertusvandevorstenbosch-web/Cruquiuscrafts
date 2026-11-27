@@ -31,18 +31,70 @@ function nldatum(iso) {
   return new Date(iso + "T00:00:00").toLocaleDateString(locale(), { day: "numeric", month: "long", year: "numeric" });
 }
 
-function whatsappLink(tekst) {
-  return "https://wa.me/" + SITE.whatsappNummer + "?text=" + encodeURIComponent(tekst);
+// Contactblok: formulier + direct-mailen-regel. Als functie zodat de labels
+// mee-wisselen van taal (het Engelse Over ons is een const die maar één keer
+// wordt opgebouwd, dus het formulier mag daar niet statisch in staan).
+function contactBlok() {
+  return `
+      <div class="contact-blok">
+        <strong>${t(TEKSTEN.contactVraag)}</strong>
+        ${contactFormulier(t(TEKSTEN.formulierOnderwerpContact), t(TEKSTEN.formulierBerichtContact), "", false)}
+        <p class="formulier-alt">${t(TEKSTEN.contactDirect)}<a href="mailto:${SITE.email}">${SITE.email}</a>.</p>
+      </div>`;
+}
+
+// Contactformulier via FormSubmit: berichten komen aan in SITE.email.
+// Het telefoonnummer staat nergens meer op de site.
+function contactFormulier(onderwerp, berichtLabel, voorkeurBericht, metFoto) {
+  return `
+    <form class="contact-formulier" action="https://formsubmit.co/${SITE.email}" method="POST">
+      <input type="hidden" name="_subject" value="${onderwerp}">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://cruquiuscrafts.nl/#/bedankt">
+      <input type="text" name="_honey" style="display:none;" tabindex="-1" autocomplete="off">
+      <div class="formulier-rij">
+        <label>${t(TEKSTEN.formulierNaam)}
+          <input type="text" name="naam" required>
+        </label>
+        <label>${t(TEKSTEN.formulierEmail)}
+          <input type="email" name="email" required>
+        </label>
+      </div>
+      <label>${berichtLabel}
+        <textarea name="bericht" rows="6" required>${voorkeurBericht || ""}</textarea>
+      </label>
+      ${metFoto ? `<label>${t(TEKSTEN.formulierFoto)}
+        <input type="file" name="attachment" accept="image/*">
+      </label>` : ""}
+      <button class="knop groen" type="submit">${t(TEKSTEN.formulierVerstuur)}</button>
+      <p class="formulier-noot">${t(TEKSTEN.formulierToelichting)}</p>
+    </form>`;
 }
 
 const TEKSTEN = {
-  bestel: { nl: "Hallo Cruquius Crafts! Ik wil graag bestellen: ", en: "Hi Cruquius Crafts! I'd like to order: " },
-  workshopAanmelding: { nl: "Hallo! Ik meld me aan voor de workshop '", en: "Hi! I'd like to sign up for the workshop '" },
-  op: { nl: "' op ", en: "' on " },
-  groet: { nl: "Hallo Cruquius Crafts!", en: "Hi Cruquius Crafts!" },
+  bestelOnderwerp: { nl: "Bestelling: ", en: "Order: " },
+  aanmeldOnderwerp: { nl: "Aanmelding workshop: ", en: "Workshop sign-up: " },
   bannerAlt: { nl: "Cruquius Crafts — lokaal, ambachtelijk, met passie", en: "Cruquius Crafts — local, artisanal, with passion" },
-  bestelKnop: { nl: "Bestel via WhatsApp", en: "Order via WhatsApp" },
+  bestelKnop: { nl: "Bestel per mail", en: "Order by email" },
   meldKnop: { nl: "Meld je aan", en: "Sign up" },
+  formulierNaam: { nl: "Je naam", en: "Your name" },
+  formulierEmail: { nl: "Je e-mailadres", en: "Your email address" },
+  formulierBerichtBuurt: { nl: "Je verhaal", en: "Your story" },
+  formulierBerichtContact: { nl: "Je bericht", en: "Your message" },
+  formulierFoto: { nl: "Foto (optioneel)", en: "Photo (optional)" },
+  formulierVerstuur: { nl: "Verstuur", en: "Send" },
+  formulierToelichting: {
+    nl: "Je bericht komt direct in onze mailbox terecht — we mailen je terug.",
+    en: "Your message lands straight in our mailbox — we'll email you back."
+  },
+  formulierOnderwerpBuurt: { nl: "Buurtverhaal via de website", en: "Neighbourhood story via the website" },
+  formulierOnderwerpContact: { nl: "Bericht via de website", en: "Message via the website" },
+  contactDirect: { nl: "Liever direct mailen? ", en: "Prefer to email directly? " },
+  bedanktKop: { nl: "Bedankt! 🌱", en: "Thank you! 🌱" },
+  bedanktTekst: {
+    nl: "Je bericht is onderweg naar onze mailbox. We schrijven terug zodra de kippen het toelaten.",
+    en: "Your message is on its way to our mailbox. We'll write back as soon as the chickens allow it."
+  },
   uitverkocht: { nl: "uitverkocht", en: "sold out" },
   vol: { nl: "vol", en: "full" },
   soort: {
@@ -59,20 +111,20 @@ const TEKSTEN = {
   terugNaarBlog: { nl: "← alle verhalen", en: "← all stories" },
   winkelKop: { nl: "Winkel", en: "Shop" },
   winkelIntro: {
-    nl: "Alles is handgemaakt en in beperkte hoeveelheid. Bestellen doe je via WhatsApp — we sturen je dan de betaal- en afhaalmogelijkheden. Ophalen in " + SITE.plaats.nl + " of afspreken.",
-    en: "Everything is handmade and in limited supply. To order, send us a WhatsApp message — we'll send you the payment and pickup options. Pick up in " + SITE.plaats.en + " or arrange to meet."
+    nl: "Alles is handgemaakt en in beperkte hoeveelheid. Bestellen doe je per mail — we sturen je dan de betaal- en afhaalmogelijkheden. Ophalen in " + SITE.plaats.nl + " of afspreken.",
+    en: "Everything is handmade and in limited supply. To order, just email us — we'll send you the payment and pickup options. Pick up in " + SITE.plaats.en + " or arrange to meet."
   },
   ceramiekKop: { nl: "🏺 Ceramiek", en: "🏺 Ceramics" },
   keukenKop: { nl: "🫙 Uit de keuken", en: "🫙 From the kitchen" },
   workshopsKop: { nl: "Workshops & evenementen", en: "Workshops & events" },
   workshopsIntro: {
-    nl: "Kom langs op de boerderij. Groepen zijn klein, dus meld je op tijd aan via WhatsApp.",
-    en: "Come visit the farm. Groups are small, so sign up in time via WhatsApp."
+    nl: "Kom langs op de boerderij. Groepen zijn klein, dus meld je op tijd aan per mail.",
+    en: "Come visit the farm. Groups are small, so sign up in time by email."
   },
   blogKop: { nl: "Blog", en: "Blog" },
   overKop: { nl: "Over ons", en: "About us" },
   verhaalLeeg: { nl: "Dit verhaal bestaat niet (meer).", en: "This story no longer exists." },
-  winkelLeeg: { nl: "De winkel is nog even leeg. Zodra de werkplaats of de keuken iets nieuws oplevert, vind je het hier — of stel gerust alvast iets voor via WhatsApp.", en: "The shop is empty for now. As soon as the workshop or the kitchen produces something new, you'll find it here — or feel free to already reach out via WhatsApp." },
+  winkelLeeg: { nl: "De winkel is nog even leeg. Zodra de werkplaats of de keuken iets nieuws oplevert, vind je het hier — of stel gerust alvast iets voor per mail.", en: "The shop is empty for now. As soon as the workshop or the kitchen produces something new, you'll find it here — or feel free to already reach out by email." },
   workshopsLeeg: { nl: "Er staat nog geen workshop gepland. Zodra we er een geven, lees je het hier als eerste.", en: "No workshop is scheduled yet. As soon as we host one, you'll read about it here first." },
   buurtKop: { nl: "Van de buurt", en: "From the neighbourhood" },
   buurtIntro: {
@@ -80,10 +132,9 @@ const TEKSTEN = {
     en: "We're not the only ones busy making things. On this page, neighbours and visitors get the floor: what have you made, grown or brewed?"
   },
   buurtLeeg: {
-    nl: "Ook iets gemaakt of gekweekt waar je trots op bent? Stuur je verhaal met foto's via WhatsApp — van moestuin tot werkbank, we plaatsen het graag.",
-    en: "Made or grown something you're proud of? Send us your story with photos via WhatsApp — from vegetable garden to workbench, we'd love to share it."
+    nl: "Ook iets gemaakt of gekweekt waar je trots op bent? Vul hieronder het formulier in — van moestuin tot werkbank, we plaatsen het graag.",
+    en: "Made or grown something you're proud of? Fill in the form below — from vegetable garden to workbench, we'd love to share it."
   },
-  buurtStuur: { nl: "Stuur je verhaal via WhatsApp", en: "Send your story via WhatsApp" },
   buurtBericht: {
     nl: "Hallo! Ik heb iets gemaakt of gekweekt en wil graag mijn verhaal delen op Van de buurt.",
     en: "Hi! I made or grew something and would love to share my story on From the neighbourhood."
@@ -98,8 +149,7 @@ const TEKSTEN = {
     en: "Page not found. <a href=\"#/\">Back to home</a>"
   },
   contactVraag: { nl: "Vragen of iets bestellen?", en: "Questions or want to order?" },
-  contactVia: { nl: "Stuur een bericht via ", en: "Send a message via " },
-  contactOf: { nl: " of mail naar ", en: " or email " },
+  buurtThuisKnop: { nl: "Deel je verhaal →", en: "Share your story →" },
   nav: {
     home: { nl: "Home", en: "Home" },
     winkel: { nl: "Winkel", en: "Shop" },
@@ -132,7 +182,7 @@ function productKaart(p) {
         <p class="beschrijving">${t(p.beschrijving)}</p>
         <div class="prijs">${euro(p.prijs)}</div>
         ${p.opVoorraad
-          ? `<a class="knop groen klein" target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.bestel) + t(p.naam) + " (" + euro(p.prijs) + ").")}">${t(TEKSTEN.bestelKnop)}</a>`
+          ? `<a class="knop groen klein" href="mailto:${SITE.email}?subject=${encodeURIComponent(t(TEKSTEN.bestelOnderwerp) + t(p.naam))}">${t(TEKSTEN.bestelKnop)}</a>`
           : `<span class="badge uit">${t(TEKSTEN.uitverkocht)}</span>`}
       </div>
     </div>`;
@@ -152,7 +202,7 @@ function workshopKaart(w) {
         <p class="beschrijving">${t(w.beschrijving)}</p>
         <div class="prijs">${euro(w.prijs)} <small style="color:var(--grijs); font-weight:400;">${t(TEKSTEN.perPersoon)} · ${w.plekken} ${t(TEKSTEN.plekken)}</small></div>
         ${w.opVoorraad
-          ? `<a class="knop primair klein" target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.workshopAanmelding) + t(w.naam) + t(TEKSTEN.op) + nldatum(w.datum) + ".")}">${t(TEKSTEN.meldKnop)}</a>`
+          ? `<a class="knop primair klein" href="mailto:${SITE.email}?subject=${encodeURIComponent(t(TEKSTEN.aanmeldOnderwerp) + t(w.naam))}">${t(TEKSTEN.meldKnop)}</a>`
           : `<span class="badge uit">${t(TEKSTEN.vol)}</span>`}
       </div>
     </div>`;
@@ -212,7 +262,7 @@ views.home = function () {
       <div class="contact-blok" style="text-align:center;">
         <h2 style="margin-bottom:6px;">${t(TEKSTEN.buurtThuisKop)}</h2>
         <p style="margin-bottom:14px;">${t(TEKSTEN.buurtThuisTekst)}</p>
-        <a class="knop groen" target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.buurtBericht))}">${t(TEKSTEN.buurtStuur)}</a>
+        <a class="knop groen" href="#/buurt">${t(TEKSTEN.buurtThuisKnop)}</a>
       </div>
     </section>`;
 };
@@ -259,7 +309,7 @@ views.buurt = function () {
     </div>` : ""}
     <div class="leeg" style="margin-top: ${posts.length ? "26px" : "0"};">
       <p>${t(TEKSTEN.buurtLeeg)}</p>
-      <p style="margin-top:14px;"><a class="knop groen" target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.buurtBericht))}">${t(TEKSTEN.buurtStuur)}</a></p>
+      ${contactFormulier(t(TEKSTEN.formulierOnderwerpBuurt), t(TEKSTEN.formulierBerichtBuurt), t(TEKSTEN.buurtBericht), true)}
     </div>`;
 };
 
@@ -322,15 +372,20 @@ views.over = function () {
       <strong>Miles</strong> (kat, houdt zich erbuiten) en <strong>vijf kippen</strong>.
       Lucy had even pensioen genomen, maar is weer aan het werk.</p>
       <p class="slotzin"><em>Van zaadje tot sambal.</em></p>
-      <div class="contact-blok">
-        <strong>${t(TEKSTEN.contactVraag)}</strong><br>
-        ${t(TEKSTEN.contactVia)}<a target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.groet))}">WhatsApp</a>
-        ${t(TEKSTEN.contactOf)}<a href="mailto:${SITE.email}">${SITE.email}</a>.
-      </div>
+      ${contactBlok()}
     </div>`;
 };
 
 views.contact = views.over;
+
+views.bedankt = function () {
+  return `
+    <div class="leeg">
+      <h2>${t(TEKSTEN.bedanktKop)}</h2>
+      <p style="margin-top:10px;">${t(TEKSTEN.bedanktTekst)}</p>
+      <p style="margin-top:14px;"><a class="knop groen klein" href="#/">${t(TEKSTEN.nav.home)}</a></p>
+    </div>`;
+};
 
 
 const OVER_EN = `
@@ -361,15 +416,10 @@ const OVER_EN = `
       <strong>Miles</strong> (cat, stays out of it) and <strong>five chickens</strong>.
       Lucy had even taken early retirement, but is back at work.</p>
       <p class="slotzin"><em>From seed to sambal.</em></p>
-      <div class="contact-blok">
-        <strong>${t(TEKSTEN.contactVraag)}</strong><br>
-        ${t(TEKSTEN.contactVia)}<a target="_blank" rel="noopener" href="${whatsappLink(t(TEKSTEN.groet))}">WhatsApp</a>
-        ${t(TEKSTEN.contactOf)}<a href="mailto:${SITE.email}">${SITE.email}</a>.
-      </div>
     </div>`;
 
 views.overEn = function () {
-  return OVER_EN;
+  return OVER_EN + contactBlok();
 };
 
 function render() {
@@ -385,6 +435,7 @@ function render() {
   else if (delen[0] === "blog" && delen[1]) html = views.blogPost(delen[1]);
   else if (delen[0] === "blog") html = views.blog();
   else if (delen[0] === "over" || delen[0] === "contact") html = taal === "en" ? views.overEn() : views.over();
+  else if (delen[0] === "bedankt") html = views.bedankt();
   else html = `<div class="leeg">${t(TEKSTEN.nietGevonden)}</div>`;
 
   app.innerHTML = html;

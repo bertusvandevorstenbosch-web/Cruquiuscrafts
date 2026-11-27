@@ -210,6 +210,39 @@ main { max-width: 960px; margin: 0 auto; padding: 24px 18px 60px; }
 }
 .contact-blok a { font-weight: 600; }
 
+/* contactformulier */
+.contact-formulier {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+  max-width: 560px;
+  text-align: left;
+}
+.contact-formulier label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: system-ui, sans-serif;
+}
+.contact-formulier input[type="text"],
+.contact-formulier input[type="email"],
+.contact-formulier textarea,
+.contact-formulier input[type="file"] {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1.5px solid var(--rand);
+  border-radius: 12px;
+  background: var(--wit);
+  width: 100%;
+}
+.contact-formulier textarea { resize: vertical; }
+.contact-formulier .knop { justify-self: start; }
+.formulier-rij { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 560px) { .formulier-rij { grid-template-columns: 1fr; } }
+.formulier-noot { color: var(--grijs); font-size: 0.85rem; }
+.formulier-alt { margin-top: 14px; }
+
 /* footer */
 .site-footer {
   background: var(--donker);

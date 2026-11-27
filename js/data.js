@@ -3,7 +3,8 @@
 // Anna's familie) wordt daarna bijgewerkt — vraag er gerust om.
 
 const SITE = {
-  whatsappNummer: "31615086832",
+  // whatsappNummer bewust verwijderd: bezoekers bereiken ons via het
+  // contactformulier (FormSubmit) of per mail. Nummer staat nergens meer op de site.
   email: "hallo@cruquiuscrafts.nl",
   plaats: { nl: "Cruquius", en: "Cruquius" }
 };
