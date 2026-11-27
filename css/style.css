@@ -173,8 +173,8 @@ main { max-width: 960px; margin: 0 auto; padding: 24px 18px 60px; }
 }
 .artikel .tekst p { margin-bottom: 14px; font-size: 1.02rem; }
 .artikel .tekst h2 { font-size: 1.2rem; margin: 22px 0 8px; color: var(--donker); }
-.artikel .tekst ul, .artikel .tekst ol { margin: 0 0 14px 22px; }
-.artikel .tekst li { margin-bottom: 6px; }
+.artikel .tekst ul, .artikel .tekst ol, .artikel ul, .artikel ol { margin: 0 0 14px 22px; }
+.artikel .tekst li, .artikel li { margin-bottom: 6px; }
 
 /* workshops */
 .workshop { display: flex; flex-direction: column; }
