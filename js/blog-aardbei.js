@@ -55,7 +55,11 @@ const AARDBEIPOSTS = [
 <h2>En de aardbeien?</h2>
 <p>Die kwamen er niet. In het voorjaar zag het er goed uit: bijna alle plantjes kregen nieuw blad en ik knipte trouw de eerste bloemen eraf, zodat ze sterk zouden worden.</p>
 <p>Maar wat op papier een goed idee leek, was het in de praktijk niet. Door de verschrikkelijk hete zomer droogden de bakjes steeds te snel uit. We hadden daardoor amper aardbeien. Pas in september begonnen de planten echt goed te groeien, maar toen konden de vruchten niet meer afrijpen.</p>
-<p>Een mislukt experiment dus, maar wel een met een goed verhaal en een hoop geleerd over droogte.</p>`,
+<p>Een mislukt experiment dus, maar wel een met een goed verhaal en een hoop geleerd over droogte.</p>
+<h2>Update, eind november</h2>
+<p>De muur leeft nog. Na de hete zomer leken de bakken opgegeven, maar met de herfstregen kwamen de planten vanzelf terug: nieuw blad, dichte rozetten, en hier en daar zelfs nog een late bloem. Een echte oogst was dit jaar niet meer in zit, maar de planten gaan gezond de winter in. Doordragers als de Ostara en Mara des Bois geven volgend voorjaar gewoon weer vruchten \u2014 dus volgend jaar krijgt de muur een tweede kans. En ik? Volgend voorjaar staat de gieter naast de muur, met een briefje erop: niet vergeten.</p>
+<img class="afbeelding" src="images/20261127_151817_copy_1024x2216.jpg" alt="De muur in november: de planten zijn er weer" style="margin: 8px 0 16px;">
+<img class="afbeelding" src="images/20261127_151821_copy_1024x473.jpg" alt="De muur van dichtbij, eind november" style="margin: 8px 0 16px;">`,
       en: `<p>In February I ordered forty everbearing strawberry plants. Just because I could. Then one day a confirmation email landed: they arrive tomorrow.</p>
 <p>At that point I had zero planters, zero potting soil and zero plan. What I did have: a pile of pine boards, a garage full of tools, and a deadline. And nothing focuses the mind quite like a deadline.</p>
 <h2>The idea</h2>
@@ -97,7 +101,11 @@ const AARDBEIPOSTS = [
 <h2>And the strawberries?</h2>
 <p>They never really showed up. In spring it all looked promising: nearly every plant grew new leaves, and I dutifully snipped off the first flowers so the plants could grow strong.</p>
 <p>But what looked good on paper was not good in practice. The brutally hot summer dried the pockets out faster than I could water them. We got barely any strawberries. Only in September did the plants really take off, and by then the fruit had no chance of ripening.</p>
-<p>A failed experiment, then, but one with a good story and a proper lesson in drought.</p>`
+<p>A failed experiment, then, but one with a good story and a proper lesson in drought.</p>
+<h2>Update, late November</h2>
+<p>The wall lives. After that brutal summer the troughs looked finished, but with the autumn rain the plants simply came back: new leaves, dense little crowns, even a few late blossoms here and there. No real harvest this year \u2014 but the plants are heading into winter healthy. Everbearing varieties like Ostara and Mara des Bois will fruit again next spring, so the wall gets a second chance. And me? Next spring the watering can stands right beside the wall, with a note on it: don't forget.</p>
+<img class="afbeelding" src="images/20261127_151817_copy_1024x2216.jpg" alt="The wall in November: the plants are back" style="margin: 8px 0 16px;">
+<img class="afbeelding" src="images/20261127_151821_copy_1024x473.jpg" alt="The wall up close, late November" style="margin: 8px 0 16px;">`
     }
   },
 ];
