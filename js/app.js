@@ -328,7 +328,7 @@ views.contact = views.over;
 const OVER_EN = `
     <div class="sectie-kop"><h2>${TEKSTEN.overKop.en}</h2></div>
     <div class="artikel">
-      <p>We are <strong>Bert and Anna</strong>. On 460 m² in De Cruquius we grow, ferment,
+      <p>We are <strong>Bert and Anna</strong>. On about 5,000 square feet in De Cruquius we grow, ferment,
       build and make all kinds of things — and as Cruquius Crafts we show how it's done,
       including the things that fail. <strong>Especially those.</strong></p>
       <p>Bert does the projects: a greenhouse that doubles as a chicken coop, soy sauce that
