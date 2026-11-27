@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cruquiuscrafts.nl/sitemap.xml
