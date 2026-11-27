@@ -43,15 +43,17 @@ function contactBlok() {
       </div>`;
 }
 
-// Contactformulier via FormSubmit: berichten komen aan in SITE.email.
-// Het telefoonnummer staat nergens meer op de site.
+// Contactformulier via Web3Forms: berichten gaan direct naar het geregistreerde
+// mailadres (Berts Gmail) en zijn onafhankelijk van de doorstuuralias van mijn.host.
+// De access key mag zichtbaar zijn; het mailadres staat hierdoor nergens in de code.
 function contactFormulier(onderwerp, berichtLabel, voorkeurBericht, metFoto) {
   return `
-    <form class="contact-formulier" action="https://formsubmit.co/${SITE.email}" method="POST">
-      <input type="hidden" name="_subject" value="${onderwerp}">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://cruquiuscrafts.nl/#/bedankt">
-      <input type="text" name="_honey" style="display:none;" tabindex="-1" autocomplete="off">
+    <form class="contact-formulier" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="144eb51a-859d-4d77-a095-451c36cb59b5">
+      <input type="hidden" name="subject" value="${onderwerp}">
+      <input type="hidden" name="from_name" value="Cruquius Crafts website">
+      <input type="hidden" name="redirect" value="https://cruquiuscrafts.nl/#/bedankt">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1">
       <div class="formulier-rij">
         <label>${t(TEKSTEN.formulierNaam)}
           <input type="text" name="naam" required>
@@ -63,9 +65,7 @@ function contactFormulier(onderwerp, berichtLabel, voorkeurBericht, metFoto) {
       <label>${berichtLabel}
         <textarea name="bericht" rows="6" required>${voorkeurBericht || ""}</textarea>
       </label>
-      ${metFoto ? `<label>${t(TEKSTEN.formulierFoto)}
-        <input type="file" name="attachment" accept="image/*">
-      </label>` : ""}
+      ${metFoto ? `<p class="formulier-noot">${t(TEKSTEN.formulierFotoNoot)}</p>` : ""}
       <button class="knop groen" type="submit">${t(TEKSTEN.formulierVerstuur)}</button>
       <p class="formulier-noot">${t(TEKSTEN.formulierToelichting)}</p>
     </form>`;
@@ -81,7 +81,10 @@ const TEKSTEN = {
   formulierEmail: { nl: "Je e-mailadres", en: "Your email address" },
   formulierBerichtBuurt: { nl: "Je verhaal", en: "Your story" },
   formulierBerichtContact: { nl: "Je bericht", en: "Your message" },
-  formulierFoto: { nl: "Foto (optioneel)", en: "Photo (optional)" },
+  formulierFotoNoot: {
+    nl: "Heb je foto's? Mail ze naar hallo@cruquiuscrafts.nl \u2014 we vragen er zelf ook naar zodra je bericht binnen is.",
+    en: "Got photos? Email them to hallo@cruquiuscrafts.nl \u2014 we'll ask for them once your message arrives anyway."
+  },
   formulierVerstuur: { nl: "Verstuur", en: "Send" },
   formulierToelichting: {
     nl: "Je bericht komt direct in onze mailbox terecht — we mailen je terug.",
