@@ -181,6 +181,7 @@ const TEKSTEN = {
     winkel: { nl: "Winkel", en: "Shop" },
     workshops: { nl: "Workshops", en: "Workshops" },
     blog: { nl: "Blog", en: "Blog" },
+    buurt: { nl: "Van de buurt", en: "From the neighbourhood" },
     over: { nl: "Over ons", en: "About us" },
     contact: { nl: "Contact", en: "Contact" }
   },
